@@ -21,8 +21,9 @@ namespace :clone_spreadsheet do
 
     begin
       result = service.post_to_endpoint(path, payload, header)
+      puts "\n\nresult : #{result}"
       if result["error"] && result["error"]["code"].to_i == 401
-        service.authenticate.get_access_token_using_refresh_token(service)
+        service.authenticate.get_new_access_token
         raise "InvalidTokenError"
       end
     rescue Exception => e
