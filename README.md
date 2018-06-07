@@ -4,7 +4,7 @@ This would also override some cell values and applies trigger on it. It would ad
 
 ## Steps for App Script Run
 
-1. Run rake file using 'rake clone_spreadsheet:run'
+1. Run rake file using `rake clone_spreadsheet:run`
 2. For the first time it will ask the user to paste the URL in browser. This will generate a token. Copy the token and paste it on console.
 3. It will save the access token and refresh token in the `tokens.yml` file.
 
